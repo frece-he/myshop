@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>My Shop</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../page-resource/img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../page-resource/css/base.css" />
+		<script type="text/javascript" charset="utf-8" src="../page-resource/js/common.js"></script>
+	</head>
+
+	<body>
+		<!-- 公用头部模块 begin -->
+		<a name="top"></a>
+		<div class="header">
+			<div class="headerCon">
+				<div class="leftbar">
+					<i class="logoHeader"></i>
+					<ul class="leftbarTxt">
+						<li><a href="#"> 首    页 </a></li>
+						<li><a href="#">官方商城</a></li>
+						<li><a href="#">社区交流</a></li>
+						<li><a href="#">服务支持</a></li>
+					</ul>
+				</div>
+				<div class="search">
+					<input type="text" class="searchInput" placeholder="站内搜索" />
+					<input type="button" class="searchBtn" />
+				</div>
+				<div class="rightbar">
+					<a href="#"><i class="rightbarImg" title="购物车"></i></a>
+					<div class="rightbarTxt">
+						<a class="rightA" href="#">登录</a>
+						<span class="fc-fff">|</span>
+						<a class="rightA" href="#">注册</a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<!-- 公用头部模块 end  -->
+		
+		<!-- 主页内容  begin -->
+		<div class="banner">
+			<script language="JavaScript">
+				var da = [];
+				da.push({
+					src: "../page-resource/img/banner1.jpg",
+					name: "第一张",
+					link: ""
+				});
+				da.push({
+					src: "../page-resource/img/banner2.jpg",
+					name: "第二张",
+					link: ""
+				});
+				var c = {
+					bg: "#008EFE", //右下数字背景颜色
+					color: "#FFFFFF", //右下数字颜色
+					cbg: "#FFFFFF", //右下当前数字背景颜色
+					ccolor: "#008FDF", //右下当前数字颜色
+					bc: "#ccc", //边框颜色
+					step: 2500 //时长，1000一秒
+				}
+				new IMGS("banner", 1200, 350, da, c);
+				//new IMGS("id号随便写不要和页面的id重复就可以",宽度,高度,数据[,设置]);
+			</script>
+		</div>
+		<div class="home">
+			<div class="homeCon ">
+				<div class="mainProArea">
+					<a href="#" class="mainProBig">
+						<img src="../page-resource/img/products/EOS_6D_big.jpg"  class="proB"/>
+						<span>EOS 6D</span>
+					</a>
+					<a href="#" class="mainProSmall">
+						<img src="../page-resource/img/products/EF_8-15mm_f4L_USM.jpg"  class="proS"/>
+						<span>EF 8-15 mm f/4L USM</span>
+					</a>
+				</div>
+				<div class="mainProArea">
+					<a href="#" class="mainProBig">
+						<img src="../page-resource/img/products/EOS_7D_big.jpg"  class="proB"/>
+						<span>EOS 7D</span>
+					</a>
+					<a href="#" class="mainProSmall">
+						<img src="../page-resource/img/products/LEGRIAminiX.jpg"  class="proS"/>
+						<span>LEGRIA mini X</span>
+					</a>
+				</div>
+				<a href="#" class="mainProArea mainPro">
+					<img src="../page-resource/img/products/EOS_80D_big.jpg"  class="proB"/>
+					<div class="height5"></div>
+					<span>EOS 80D</span>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!-- 主页内容 end -->
+
+		<!-- 公用底部模块 begin -->
+		<div class="footerBg">
+			<div class="footer">
+				<div class="footerCon">
+					<i class="footerImg fl"></i>
+					<div class="footerList fl">
+						<h3>账号相关</h3>
+						<a href="#">个人信息</a>
+						<a href="#">更改密码</a>
+						<a href="#">会员认证</a>
+					</div>
+					<div class="footerList fl">
+						<h3>产品相关</h3>
+						<a href="#">热门商品</a>
+						<a href="#">产品知识</a>
+					</div>
+					<div class="footerList fl">
+						<h3>网站服务</h3>
+						<a href="#">订单查询</a>
+						<a href="#">意见反馈</a>
+					</div>
+					<div class="footerCode fl">
+						<h3>关注我们</h3>
+						<div class="codeDiv fl">
+							<span>官方微信号</span>
+							<img class="codeImg" src="../page-resource/img/QRcode1.png" />
+						</div>
+						<div class="codeDiv fl">
+							<span>APP下载</span>
+							<img class="codeImg" src="../page-resource/img/QRcode2.png" />
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="copyRight">
+					<p>CopyRight©2012-2027 MyShop Co.,Ltd.. All Rights Reserved </p>
+					<p>沪ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+		<!-- 公用底部模块 end -->
+		<!-- 右侧菜单 begin -->
+		<div class="rightMenu">
+			<ul>
+				<li title="返回顶部">
+					<a href="#top" class="goToTop"></a>
+				</li>
+				<li title="在线客服">
+					<a href="#" class="serviceOnline"></a>
+				</li>
+				<li title="意见反馈">
+					<a href="#" class="feedback"></a>
+				</li>
+			</ul>
+
+		</div>
+		<!-- 右侧菜单 end -->
+		<script type="text/javascript" charset="utf-8" src="../page-resource/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../page-resource/js/common.js"></script>
+	</body>
+
+</html>
