@@ -14,16 +14,16 @@ public class NoSpecialChar implements Validator {
 	public void validate(FacesContext arg0, UIComponent arg1, Object arg2)
 			throws ValidatorException {
 		String str = (String) arg2;
-		if(!str.matches("^([\u4e00-\u9fa5?£¿]+|[a-zA-Z@_0-9]+)$")){
+		if(!str.matches("^([\u4e00-\u9fa5?ï¿½ï¿½]+|[a-zA-Z@_0-9]+)$")){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("²»ÄÜÊäÈë³ı\"@\",\"?\"Óë\"_\"µÄÌØÊâ×Ö·û");
-			message.setSummary("²»ÄÜÊäÈë³ı\"@\",\"?\"Óë\"_\"µÄÌØÊâ×Ö·û");
+			message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\"@\",\"?\"ï¿½ï¿½\"_\"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½");
+			message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\"@\",\"?\"ï¿½ï¿½\"_\"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½");
 			throw new ValidatorException(message);
 		}
-		if(str.contains("£¿")){
+		if(str.contains("ï¿½ï¿½")){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("·ûºÅÓ¦ÎªÓ¢ÎÄ¸ñÊ½");
-			message.setSummary("·ûºÅÓ¦ÎªÓ¢ÎÄ¸ñÊ½");
+			message.setDetail("ï¿½ï¿½ï¿½ï¿½Ó¦ÎªÓ¢ï¿½Ä¸ï¿½Ê½");
+			message.setSummary("ï¿½ï¿½ï¿½ï¿½Ó¦ÎªÓ¢ï¿½Ä¸ï¿½Ê½");
 			throw new ValidatorException(message);
 		}
 		

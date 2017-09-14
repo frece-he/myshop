@@ -161,11 +161,11 @@ public class ForgotPasswordBean {
 			if (count >= 3) 
 			{			
 				this.answer = null;
-				throw new Exception("ÕË»§ÒÑ±»Ëø¶¨");
+				throw new Exception("ï¿½Ë»ï¿½ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½");
 			}
 			if(!this.answer.equalsIgnoreCase(this.securityAnswer)){
 				this.answer = null;
-				throw new Exception("°²È«ÎÊÌâ´ğ°¸´íÎó");
+				throw new Exception("ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ğ°¸´ï¿½ï¿½ï¿½");
 			}
 			this.answer = null;
 			this.changePassPanl = "display";
@@ -175,8 +175,8 @@ public class ForgotPasswordBean {
 			session.setAttribute("userId", null);
 			session.setAttribute("status", null);
 			session.setAttribute("proName", null);
-			if(exception.getMessage().contains("°²È«ÎÊÌâ´ğ°¸´íÎó")){
-				this.message="Äú»¹ÓĞ" + 	(2 - this.count) + "´Î³¢ÊÔ»ú»á";				
+			if(exception.getMessage().contains("ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ğ°¸´ï¿½ï¿½ï¿½")){
+				this.message="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + 	(2 - this.count) + "ï¿½Î³ï¿½ï¿½Ô»ï¿½ï¿½ï¿½";				
 				this.count++;				
 				if(count >= 3){
 					try {
@@ -184,7 +184,7 @@ public class ForgotPasswordBean {
 					} catch (Exception e) {					
 						e.printStackTrace();
 					}
-					this.message = "ÄúµÄÕË»§ÒÑ±»Ëø¶¨£¬ÇëÁªÏµ¹ÜÀíÔ±½âËø";
+					this.message = "ï¿½ï¿½ï¿½ï¿½ï¿½Ë»ï¿½ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½";
 				}
 			}
 			else{
@@ -206,7 +206,7 @@ public class ForgotPasswordBean {
 		String path = "";
 		try {
 			if(!this.newPassword.equals(this.confirmPass)){
-				throw new Exception("Á½´ÎÃÜÂëÊäÈë²»Ò»ÖÂ");
+				throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»Ò»ï¿½ï¿½");
 			}
 			List<String> list = new ArrayList<String>();
 			list.add(this.userId);

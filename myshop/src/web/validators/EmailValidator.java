@@ -18,8 +18,8 @@ public class EmailValidator implements Validator{
 //		"\\w+([-\\.]\\w+)*@\\w+([\\.-]\\w+)*\\.\\w{2,4}$"				
 		if(!email.matches("[A-Za-z0-9_]+@[A-Za-z0-9]+.[A-Za-z]{2,4}")){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("ÓÊÏä¸ñÊ½Îª£ºabc@163.com");
-			message.setSummary("ÓÊÏä¸ñÊ½Îª£ºabc@163.com");
+			message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Îªï¿½ï¿½abc@163.com");
+			message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Îªï¿½ï¿½abc@163.com");
 			throw new ValidatorException(message);
 		}
 		

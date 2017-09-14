@@ -76,9 +76,9 @@ public class ManaOrderBean {
 		try {
 			this.orderList = new ArrayList<Order>();
 			statusItem = new ArrayList<SelectItem>();
-			this.status = "Î´Íê³É";
-			statusItem.add(new SelectItem("Î´Íê³É", "²é¿´Î´Íê³É¶©µ¥"));
-			statusItem.add(new SelectItem("ÒÑÍê³É", "²é¿´ÒÑÍê³É¶©µ¥"));
+			this.status = "Î´ï¿½ï¿½ï¿½";
+			statusItem.add(new SelectItem("Î´ï¿½ï¿½ï¿½", "ï¿½é¿´Î´ï¿½ï¿½É¶ï¿½ï¿½ï¿½"));
+			statusItem.add(new SelectItem("ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½é¿´ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½"));
 
 			this.unfinishedOrderList = Factory.createOrderService().checkAllUnfinishedOrders();
 			this.finishedOrderList = Factory.createOrderService().checkAllFinishedOrders();
@@ -100,7 +100,7 @@ public class ManaOrderBean {
 	public String viewOrder(){
 		try {
 			this.message = null;
-			this.status = "Î´Íê³É";
+			this.status = "Î´ï¿½ï¿½ï¿½";
 			this.refreshOrder();
 			
 		} catch (Exception e) {
@@ -124,10 +124,10 @@ public class ManaOrderBean {
 			this.unfinishedOrderList = Factory.createOrderService().checkAllUnfinishedOrders();
 			this.finishedOrderList = Factory.createOrderService().checkAllFinishedOrders();
 			
-			if (status == "Î´Íê³É") {
+			if (status == "Î´ï¿½ï¿½ï¿½") {
 				this.orderList = this.unfinishedOrderList;
 			}
-			else if (status == "ÒÑÍê³É") {
+			else if (status == "ï¿½ï¿½ï¿½ï¿½ï¿½") {
 				this.orderList = this.finishedOrderList;
 			}
 		} catch (Exception e) {
@@ -144,10 +144,10 @@ public class ManaOrderBean {
 	public void selectStatus(ValueChangeEvent vce){
 		this.status = (String) vce.getNewValue();
 		this.refreshOrder();
-		if (status.equals("Î´Íê³É") ) {
+		if (status.equals("Î´ï¿½ï¿½ï¿½") ) {
 			this.orderList = this.unfinishedOrderList;
 		}
-		else if (status.equals("ÒÑÍê³É")) {
+		else if (status.equals("ï¿½ï¿½ï¿½ï¿½ï¿½")) {
 			this.orderList = this.finishedOrderList;
 		}
 	}
@@ -157,7 +157,7 @@ public class ManaOrderBean {
 			Map<String, Object> map = ae.getComponent().getAttributes();
 			String orderId = (String) map.get("orderId");
 			Factory.createOrderService().changeToSent(orderId);
-			this.status = "Î´Íê³É";
+			this.status = "Î´ï¿½ï¿½ï¿½";
 			this.refreshOrder();
 			
 		} catch (Exception e) {
@@ -185,7 +185,7 @@ public class ManaOrderBean {
 			if(order != null){
 				Factory.createOrderService().closeOrder(order);
 			}
-			this.status = "Î´Íê³É";
+			this.status = "Î´ï¿½ï¿½ï¿½";
 			this.refreshOrder();
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " closeOrder", e.toString());

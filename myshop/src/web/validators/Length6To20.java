@@ -17,20 +17,20 @@ public class Length6To20 implements Validator {
 		String str = (String)arg2;
 		if(!str.matches("[A-Za-z0-9_@]+")){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("½öÄÜÊäÈëÊı×Ö¡¢×ÖÄ¸¡¢ÏÂ»®Ïß¡¢@");
-			message.setSummary("½öÄÜÊäÈëÊı×Ö¡¢×ÖÄ¸¡¢ÏÂ»®Ïß¡¢@");
+			message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Â»ï¿½ï¿½ß¡ï¿½@");
+			message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Â»ï¿½ï¿½ß¡ï¿½@");
 			throw new ValidatorException(message);
 		}
 		if(str.length() <6){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("³¤¶È²»ÄÜĞ¡ÓÚ6¸ö×Ö·û");
-			message.setSummary("³¤¶È²»ÄÜĞ¡ÓÚ6¸ö×Ö·û");
+			message.setDetail("ï¿½ï¿½ï¿½È²ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½6ï¿½ï¿½ï¿½Ö·ï¿½");
+			message.setSummary("ï¿½ï¿½ï¿½È²ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½6ï¿½ï¿½ï¿½Ö·ï¿½");
 			throw new ValidatorException(message);
 		}
 		if(str.length() > 20){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("³¤¶È²»ÄÜ´óÓÚ20¸ö×Ö·û");
-			message.setSummary("³¤¶È²»ÄÜ´óÓÚ20¸ö×Ö·û");
+			message.setDetail("ï¿½ï¿½ï¿½È²ï¿½ï¿½Ü´ï¿½ï¿½ï¿½20ï¿½ï¿½ï¿½Ö·ï¿½");
+			message.setSummary("ï¿½ï¿½ï¿½È²ï¿½ï¿½Ü´ï¿½ï¿½ï¿½20ï¿½ï¿½ï¿½Ö·ï¿½");
 			throw new ValidatorException(message);
 		}
 		

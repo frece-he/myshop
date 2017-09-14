@@ -19,21 +19,21 @@ public class FileUploadValidator implements Validator{
 		Part file = (Part) arg2;
 		if (file==null || file.getSize()<=0 || file.getContentType().isEmpty() ){
 			FacesMessage message=new FacesMessage();
-			message.setDetail("ÇëÑ¡ÔñÍ¼Æ¬ÎÄ¼þ");
-			message.setSummary("ÇëÑ¡ÔñÍ¼Æ¬ÎÄ¼þ");
+			message.setDetail("ï¿½ï¿½Ñ¡ï¿½ï¿½Í¼Æ¬ï¿½Ä¼ï¿½");
+			message.setSummary("ï¿½ï¿½Ñ¡ï¿½ï¿½Í¼Æ¬ï¿½Ä¼ï¿½");
 			throw new ValidatorException(message);
 		}    
 		String fileType = file.getContentType();
 		if (!(fileType.endsWith("jpg") || fileType.endsWith("png") || fileType.endsWith("jpeg"))) {
 			FacesMessage message=new FacesMessage();
-			message.setDetail("ÇëÑ¡Ôñ .jpg »ò .png ÎÄ¼þ");
-			message.setSummary("ÇëÑ¡Ôñ .jpg »ò .png ÎÄ¼þ");
+			message.setDetail("ï¿½ï¿½Ñ¡ï¿½ï¿½ .jpg ï¿½ï¿½ .png ï¿½Ä¼ï¿½");
+			message.setSummary("ï¿½ï¿½Ñ¡ï¿½ï¿½ .jpg ï¿½ï¿½ .png ï¿½Ä¼ï¿½");
 			throw new ValidatorException(message);
 		}    		
     	if (file.getSize()>2000000){    		
     		FacesMessage message=new FacesMessage();
-			message.setDetail("Í¼Æ¬´óÐ¡²»ÄÜ³¬¹ý 2MB¡£");
-			message.setSummary("Í¼Æ¬´óÐ¡²»ÄÜ³¬¹ý 2MB¡£");
+			message.setDetail("Í¼Æ¬ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½ 2MBï¿½ï¿½");
+			message.setSummary("Í¼Æ¬ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½ 2MBï¿½ï¿½");
 			throw new ValidatorException(message);
     	}
     		 

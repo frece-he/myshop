@@ -80,10 +80,10 @@ public class ManaAccountBean {
 				allAccountId.add(login.getUserId());
 			}
 			if(lockedAccount != null && !lockedAccount.isEmpty()){
-				this.btnDisplay="©иотй╬";
+				this.btnDisplay="О©╫О©╫О©╫О©╫й╬";
 			}
 			else{
-				this.btnDisplay="╡╩©иотй╬";
+				this.btnDisplay="О©╫О©╫О©╫О©╫О©╫О©╫й╬";
 			}
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " ManaAccountBean", e.toString());
@@ -103,11 +103,11 @@ public class ManaAccountBean {
 			List<Login> searchedAccount = new ArrayList<Login>();
 			searchedAccount.add(login);
 			this.lockedAccount = searchedAccount;
-			if(login.getStatus().equals("уЩЁё")){
-				this.btnDisplay = "╡╩©иотй╬";
+			if(login.getStatus().equals("О©╫О©╫О©╫О©╫")){
+				this.btnDisplay = "О©╫О©╫О©╫О©╫О©╫О©╫й╬";
 			}
 			else {
-				this.btnDisplay = "©иотй╬";
+				this.btnDisplay = "О©╫О©╫О©╫О©╫й╬";
 			}
 
 		} catch (Exception e) {
@@ -144,10 +144,10 @@ public class ManaAccountBean {
 			this.lockedAccount = service.getUnusualAccount();
 			this.allAccount = service.getAllAccount();
 			if(lockedAccount != null && !lockedAccount.isEmpty()){
-				this.btnDisplay="©иотй╬";
+				this.btnDisplay="О©╫О©╫О©╫О©╫й╬";
 			}
 			else{
-				this.btnDisplay="╡╩©иотй╬";
+				this.btnDisplay="О©╫О©╫О©╫О©╫О©╫О©╫й╬";
 			}
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " searchAccount", e.toString());
@@ -164,7 +164,7 @@ public class ManaAccountBean {
 
 	public void refreshTable(){
 		this.message = null;
-		this.btnDisplay="©иотй╬";
+		this.btnDisplay="О©╫О©╫О©╫О©╫й╬";
 		try {
 			this.lockedAccount = Factory.createLoginService().getUnusualAccount();
 		} catch (Exception e) {
