@@ -115,7 +115,7 @@ public class PersonalInfoBean {
 			HttpSession session = (HttpSession)FacesContext.getCurrentInstance().getExternalContext().getSession(true);
 			this.userId = (String) session.getAttribute("userId");
 			if(this.userId == null){
-				throw new Exception("ÇëÏÈµÇÂ¼");
+				throw new Exception("ï¿½ï¿½ï¿½Èµï¿½Â¼");
 			}
 			this.refreshInfo();
 		} catch (Exception e) {
@@ -172,11 +172,11 @@ public class PersonalInfoBean {
 				registration.setDateOfBirth(new SimpleDateFormat("yyyy-MM-dd").parse(dateOfBirth));				
 			}
 			if(gender != null && dateOfBirth != null && !dateOfBirth.equals("") && emailAddress != null){
-				registration.setCertification("ÊÇ");
+				registration.setCertification("ï¿½ï¿½");
 			}	
 			Factory.createRegistrationService().editProfileDetails(registration);
 			this.refreshInfo();
-//			this.message = "ÐÅÏ¢ÐÞ¸Ä³É¹¦£¡";
+//			this.message = "ï¿½ï¿½Ï¢ï¿½Þ¸Ä³É¹ï¿½ï¿½ï¿½";
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " updateInfo", e.toString());
 			if(e.getMessage().contains("DAO.TECHNICAL_ERROR")){
@@ -195,7 +195,7 @@ public class PersonalInfoBean {
 			HttpSession session = (HttpSession)FacesContext.getCurrentInstance().getExternalContext().getSession(true);
 			this.userId = (String) session.getAttribute("userId");
 			if(this.userId == null){
-				throw new Exception("ÇëÏÈµÇÂ¼");
+				throw new Exception("ï¿½ï¿½ï¿½Èµï¿½Â¼");
 			}
 //			System.out.println(userId);
 			this.refreshInfo();

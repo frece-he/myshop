@@ -17,36 +17,36 @@ public class NameValidator implements Validator{
 		FacesMessage message = new FacesMessage();
 		String str = (String) arg2;
 		if(str.contains("[0-9]+")){			
-			message.setDetail("ĞÕÃûÖĞ²»ÄÜ°üº¬Êı×Ö");
-			message.setSummary("ĞÕÃûÖĞ²»ÄÜ°üº¬Êı×Ö");
+			message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½Ğ²ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½Ğ²ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			throw new ValidatorException(message);
 		}
 //		if(str.length() >35){
-//			message.setDetail("ĞÕÃû²»ÄÜ³¬¹ı35¸ö×Ö·û");
-//			message.setSummary("ĞÕÃû²»ÄÜ³¬¹ı35¸ö×Ö·û");
+//			message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½35ï¿½ï¿½ï¿½Ö·ï¿½");
+//			message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü³ï¿½ï¿½ï¿½35ï¿½ï¿½ï¿½Ö·ï¿½");
 //			throw new ValidatorException(message);
 //		}
 		
 		if(str.matches("[a-zA-Z@_]+")){
 			if(str.length() < 2){
-				message.setDetail("Ó¢ÎÄÃû²»ÄÜĞ¡ÓÚ2¸ö×Ö·û");
-				message.setSummary("Ó¢ÎÄÃû²»ÄÜĞ¡ÓÚ2¸ö×Ö·û");
+				message.setDetail("Ó¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½2ï¿½ï¿½ï¿½Ö·ï¿½");
+				message.setSummary("Ó¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½2ï¿½ï¿½ï¿½Ö·ï¿½");
 				throw new ValidatorException(message);
 			}
 			if(str.length() > 45){
-				message.setDetail("Ó¢ÎÄÃû²»ÄÜ¶àÓÚ45¸ö×Ö·û");
-				message.setSummary("Ó¢ÎÄÃû²»ÄÜ¶àÓÚ45¸ö×Ö·û");
+				message.setDetail("Ó¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½45ï¿½ï¿½ï¿½Ö·ï¿½");
+				message.setSummary("Ó¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½45ï¿½ï¿½ï¿½Ö·ï¿½");
 				throw new ValidatorException(message);
 			}
 		}else {
 			if(str.length()<2){
-				message.setDetail("ĞÕÃû²»ÄÜĞ¡ÓÚ2¸ö×Ö·û");
-				message.setSummary("ĞÕÃû²»ÄÜĞ¡ÓÚ2¸ö×Ö·û");
+				message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½2ï¿½ï¿½ï¿½Ö·ï¿½");
+				message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½2ï¿½ï¿½ï¿½Ö·ï¿½");
 				throw new ValidatorException(message);
 			}
 			if(str.length() > 30){
-				message.setDetail("ĞÕÃû²»ÄÜ¶àÓÚ30¸ö×Ö·û");
-				message.setSummary("ĞÕÃû²»ÄÜ¶àÓÚ30¸ö×Ö·û");
+				message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½Ö·ï¿½");
+				message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½Ö·ï¿½");
 				throw new ValidatorException(message);
 			}
 		}

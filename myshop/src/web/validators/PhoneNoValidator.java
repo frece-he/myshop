@@ -16,8 +16,8 @@ public class PhoneNoValidator implements Validator {
 		Long phNo = (Long) arg2;
 		if (!phNo.toString().matches("^[1][3578][0-9]{9}$")) {
 			FacesMessage message = new FacesMessage();
-			message.setDetail("ÇëÊäÈëÕıÈ·µÄÖĞ¹úÊÖ»úºÅ");
-			message.setSummary("ÇëÊäÈëÕıÈ·µÄÖĞ¹úÊÖ»úºÅ");
+			message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½Ğ¹ï¿½ï¿½Ö»ï¿½ï¿½ï¿½");
+			message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½Ğ¹ï¿½ï¿½Ö»ï¿½ï¿½ï¿½");
 			throw new ValidatorException(message);
 		}
 		

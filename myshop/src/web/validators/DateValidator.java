@@ -31,15 +31,15 @@ public class DateValidator implements Validator {
 			} catch (Exception e) {
 				MyShopLogger.logError(this.getClass().getName(), "validate", e
 						.toString());	
-				message.setDetail("格式应为:1990-01-01");
-				message.setSummary("格式应为:1990-01-01");
+				message.setDetail("锟斤拷式应为:1990-01-01");
+				message.setSummary("锟斤拷式应为:1990-01-01");
 				throw new ValidatorException(message);
 			}
 
 				if (givenDate != null && givenDate.after(new Date())) {
 					
-					message.setDetail("出生日期应早于当前日期");
-					message.setSummary("出生日期应早于当前日期");
+					message.setDetail("锟斤拷锟斤拷锟斤拷锟斤拷应锟斤拷锟节碉拷前锟斤拷锟斤拷");
+					message.setSummary("锟斤拷锟斤拷锟斤拷锟斤拷应锟斤拷锟节碉拷前锟斤拷锟斤拷");
 					throw new ValidatorException(message);
 				}
 			

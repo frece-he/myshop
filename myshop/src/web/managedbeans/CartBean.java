@@ -69,7 +69,7 @@ public class CartBean {
 //			System.out.println(this.userId);
 //			this.products = Factory.createOrderService().checkCart(this.userId);
 //			if(this.products  != null && !this.products.isEmpty()){
-////				System.out.println("¹ºÎï³µ²»Îª¿Õ");
+////				System.out.println("ï¿½ï¿½ï¿½ï³µï¿½ï¿½Îªï¿½ï¿½");
 //				for (Product pro : this.products ) {
 //					this.totalAmount += 1.0* pro.getPrice();
 //				}
@@ -222,7 +222,7 @@ public class CartBean {
 	public void deleteOne(ActionEvent ae) {
 		this.message = null;
 		List<Product> remProList = new ArrayList<Product>();
-//		System.out.println("´Ó¹ºÎï³µÖÐÒÆ³ý");
+//		System.out.println("ï¿½Ó¹ï¿½ï¿½ï³µï¿½ï¿½ï¿½Æ³ï¿½");
 		try {
 			Map<String, Object> map = ae.getComponent().getAttributes();
 			String proName = (String) map.get("proName");
@@ -253,7 +253,7 @@ public class CartBean {
 	public String removeItems() {
 		this.message = null;
 		List<Product> remProList = new ArrayList<Product>();
-//		System.out.println("´Ó¹ºÎï³µÖÐÒÆ³ý");
+//		System.out.println("ï¿½Ó¹ï¿½ï¿½ï³µï¿½ï¿½ï¿½Æ³ï¿½");
 		String path = "";
 		try {
 			
@@ -267,7 +267,7 @@ public class CartBean {
 			}
 			System.out.println("2");
 			if(remProList.isEmpty()){
-				this.message = "Î´Ñ¡ÔñÐèÒªÒÆ³ýµÄÉÌÆ·";
+				this.message = "Î´Ñ¡ï¿½ï¿½ï¿½ï¿½Òªï¿½Æ³ï¿½ï¿½ï¿½ï¿½ï¿½Æ·";
 				return path;
 			}
 			System.out.println("3");

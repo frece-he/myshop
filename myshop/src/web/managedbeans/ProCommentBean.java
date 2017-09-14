@@ -68,7 +68,7 @@ public class ProCommentBean {
 			HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
 			this.userId = (String) session.getAttribute("userId");
 			if(userId == null){
-				throw new Exception("ÇëÏÈµÇÂ¼");
+				throw new Exception("ï¿½ï¿½ï¿½Èµï¿½Â¼");
 			}
 			ProComment comment = new ProComment();
 			comment.setUserId(this.userId);
