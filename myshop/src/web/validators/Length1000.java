@@ -16,8 +16,8 @@ public class Length1000 implements Validator {
 		String str = arg2 + "";
 		if(str.length() > 1000){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("³¤¶È²»ÄÜ´óÓÚ1000¸ö×Ö·û");
-			message.setSummary("³¤¶È²»ÄÜ´óÓÚ1000¸ö×Ö·û");
+			message.setDetail("ï¿½ï¿½ï¿½È²ï¿½ï¿½Ü´ï¿½ï¿½ï¿½1000ï¿½ï¿½ï¿½Ö·ï¿½");
+			message.setSummary("ï¿½ï¿½ï¿½È²ï¿½ï¿½Ü´ï¿½ï¿½ï¿½1000ï¿½ï¿½ï¿½Ö·ï¿½");
 			throw new ValidatorException(message);
 		}
 		

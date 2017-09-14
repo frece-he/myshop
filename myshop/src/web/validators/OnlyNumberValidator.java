@@ -16,8 +16,8 @@ public class OnlyNumberValidator implements Validator {
 		String input =  arg2 + "";
 		if(!input.matches("[0-9]+")){
 			FacesMessage message = new FacesMessage();
-			message.setDetail("ÇëÊäÈëÕıÈ·µÄÊı×Ö");
-			message.setSummary("ÇëÊäÈëÕıÈ·µÄÊı×Ö");
+			message.setDetail("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			message.setSummary("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			throw new ValidatorException(message);
 		}
 	}

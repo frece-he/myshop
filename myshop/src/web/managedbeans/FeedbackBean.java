@@ -64,14 +64,14 @@ public class FeedbackBean {
 	public String SubmitFeedBack(){
 		try {
 			if(userId ==null){
-				throw new Exception("ÇëÏÈµÇÂ¼");
+				throw new Exception("ï¿½ï¿½ï¿½Èµï¿½Â¼");
 			}
 			feedback = new Feedback();
 			feedback.setFeedbackComment(feedbackComment);
 			feedback.setUserId(userId);
 			Factory.createFeedbackService().submitFeedback(feedback);
 			this.feedbackComment = null;
-			this.message = "¸ÐÐ»ÄúµÄ±¦¹óÒâ¼û";
+			this.message = "ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " SubmitFeedBack", e.toString());
 			if(e.getMessage().contains("DAO.TECHNICAL_ERROR")){
@@ -93,7 +93,7 @@ public class FeedbackBean {
 			HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
 			this.userId = (String) session.getAttribute("userId");
 			if(userId ==null){
-				throw new Exception("ÇëÏÈµÇÂ¼");
+				throw new Exception("ï¿½ï¿½ï¿½Èµï¿½Â¼");
 			}
 			this.feedbackComment = null;
 

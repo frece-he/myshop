@@ -110,11 +110,11 @@ public class ManaExistProBean {
 			allProItem = new ArrayList<SelectItem>();		
 			indexProList = service.getIndexProducts();
 			allProList = service.getAllProducts();
-			indexProItem.add(new SelectItem(indexProList.get(0).getProName(), "²úÆ·1(×óÉÏ)"));
-			indexProItem.add(new SelectItem(indexProList.get(1).getProName(), "²úÆ·2(ÖÐÉÏ)"));
-			indexProItem.add(new SelectItem(indexProList.get(2).getProName(), "²úÆ·3(ÓÒ²à)"));
-			indexProItem.add(new SelectItem(indexProList.get(3).getProName(), "²úÆ·4(×óÏÂ)"));
-			indexProItem.add(new SelectItem(indexProList.get(4).getProName(), "²úÆ·5(ÖÐÏÂ)"));
+			indexProItem.add(new SelectItem(indexProList.get(0).getProName(), "ï¿½ï¿½Æ·1(ï¿½ï¿½ï¿½ï¿½)"));
+			indexProItem.add(new SelectItem(indexProList.get(1).getProName(), "ï¿½ï¿½Æ·2(ï¿½ï¿½ï¿½ï¿½)"));
+			indexProItem.add(new SelectItem(indexProList.get(2).getProName(), "ï¿½ï¿½Æ·3(ï¿½Ò²ï¿½)"));
+			indexProItem.add(new SelectItem(indexProList.get(3).getProName(), "ï¿½ï¿½Æ·4(ï¿½ï¿½ï¿½ï¿½)"));
+			indexProItem.add(new SelectItem(indexProList.get(4).getProName(), "ï¿½ï¿½Æ·5(ï¿½ï¿½ï¿½ï¿½)"));
 			for (String proName : allProList) {
 				allProItem.add(new SelectItem(proName));
 			}
@@ -159,7 +159,7 @@ public class ManaExistProBean {
 		try {
 			ProductService service = Factory.createProductService();
 			service.addStock(searchProName, addNum);
-			this.addStockMessage = "Ìí¼Ó¿â´æ³É¹¦";
+			this.addStockMessage = "ï¿½ï¿½Ó¿ï¿½ï¿½É¹ï¿½";
 			this.stock = service.getStock(searchProName);
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " addStock", e.toString());
@@ -184,7 +184,7 @@ public class ManaExistProBean {
 		this.changeProMessage = null;
 		try {
 			if(indexPro.equals(replacePro)){
-				throw new Exception("Ðè¸ü»»µÄ²úÆ·Óëµ±Ç°Î»ÖÃËùÏÔÊ¾µÄ²úÆ·ÏàÍ¬£¬Çë¼ì²é");
+				throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½ëµ±Ç°Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ä²ï¿½Æ·ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			}
 			Integer proNo = null;
 			for (int i = 0; i < 5; i++) {
@@ -197,7 +197,7 @@ public class ManaExistProBean {
 			Factory.createProductService().changeIndexProducts(proNo + 1,replacePro);
 			this.refresh();
 			
-			this.changeProMessage = "²úÆ·¸ü»»³É¹¦£¡";
+			this.changeProMessage = "ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½";
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " changePro", e.toString());
 			if(e.getMessage().contains("DAO.TECHNICAL_ERROR")){

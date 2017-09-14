@@ -141,7 +141,7 @@ public class RegistrationBean {
 
 	public RegistrationBean(){
 		try {
-			this.securityQuestion = "Äã×îÏëÈ¥µÄµØ·½ÊÇ?";
+			this.securityQuestion = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ÄµØ·ï¿½ï¿½ï¿½?";
 			
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " RegistrationBean", e.toString());
@@ -161,7 +161,7 @@ public class RegistrationBean {
 			 Factory.createRegistrationService().checkUserId(userId);
 			
 			if (!this.password.equals(this.confirmPassword)) {
-				this.message = "Á½´ÎÃÜÂëÊäÈë²»Ò»ÖÂ£¡";
+				this.message = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»Ò»ï¿½Â£ï¿½";
 				return path;
 			} 
 			else 
@@ -239,8 +239,8 @@ public class RegistrationBean {
 //		reg.setUserId("hewenrui123");
 //		reg.setPassword("123456");
 //		reg.setPhoneNumber(18721686863L);
-//		reg.setCustomerName("ºÎÎÄÈð");
-//		reg.setSecurityQuestion("ÄãµÄ³öÉúµØÊÇ£¿");
+//		reg.setCustomerName("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+//		reg.setSecurityQuestion("ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½");
 //		reg.setSecurityAnswer("Ò½Ôº");
 //		
 //		RegistrationService regService = Factory.createRegistrationService();

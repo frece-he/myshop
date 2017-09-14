@@ -106,10 +106,10 @@ public class ManaProBean implements Serializable  {
 		try {			
 			this.message = null;
 			this.typeList = new ArrayList<SelectItem>();
-			typeList.add(new SelectItem("ÕÕÏà»ú"));
-			typeList.add(new SelectItem("ÉãÏñ»ú"));
-			typeList.add(new SelectItem("Åä¼þ"));
-			typeList.add(new SelectItem("ÆäËû"));
+			typeList.add(new SelectItem("ï¿½ï¿½ï¿½ï¿½ï¿½"));
+			typeList.add(new SelectItem("ï¿½ï¿½ï¿½ï¿½ï¿½"));
+			typeList.add(new SelectItem("ï¿½ï¿½ï¿½"));
+			typeList.add(new SelectItem("ï¿½ï¿½ï¿½ï¿½"));
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " ManaProBean", e.toString());
 			ErrorRedirect.reDirect();						
@@ -122,7 +122,7 @@ public class ManaProBean implements Serializable  {
 		try {
 			 ProductService service =  Factory.createProductService();	
 			 if(service.checkProduct(proName).equals("Found")){
-				 throw new Exception("²úÆ·ÃûÒÑ´æÔÚ");
+				 throw new Exception("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½");
 			 }
 			 
 			 fileName = FilenameUtils.getName(getSubmittedFileName(file));
@@ -143,7 +143,7 @@ public class ManaProBean implements Serializable  {
 	         product.setProLink(prolink);	         
 	         product.setSelledDate(null);
 	         service.releaseNewPro(product, newProStock);
-	         this.message = "²úÆ·Ìí¼Ó³É¹¦£¡";
+	         this.message = "ï¿½ï¿½Æ·ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½";
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " addProduct", e.toString());
 			if(e.getMessage().contains("DAO.TECHNICAL_ERROR")){
@@ -151,7 +151,7 @@ public class ManaProBean implements Serializable  {
 			}
 			else{
 				if(e.getMessage().contains("D:\\eclipse\\workplace\\")){
-					this.message ="¸ÃÂ·¾¶ÏÂ´æÔÚÃûÎª£º\"" + fileName + "\"µÄÍ¼Æ¬";
+					this.message ="ï¿½ï¿½Â·ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½\"" + fileName + "\"ï¿½ï¿½Í¼Æ¬";
 				}else {
 					this.message =e.getMessage();
 				}

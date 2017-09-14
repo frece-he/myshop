@@ -98,7 +98,7 @@
 //			HttpSession session = (HttpSession) eContext.getSession(true);
 //			this.userId = (String) session.getAttribute(userId);
 //			if(userId == null){
-//				throw new Exception("ÇëÏÈµÇÂ¼");
+//				throw new Exception("ï¿½ï¿½ï¿½Èµï¿½Â¼");
 //			}
 //			this.proName = (String) session.getAttribute(proName);
 ////			this.product = Factory.createProductService().
@@ -131,7 +131,7 @@
 //				List<Product> prolist = Factory.createProductService().getProductsWithId(proName, purNum);
 ////				orderId = Factory.createProductService().doPurchase(prolist, userId);
 //				Factory.createProductService().doPurchase(prolist, userId);
-//				this.message = "¹ºÂò³É¹¦£¬Äú¿ÉÔÚ¶©µ¥¹ÜÀíÒ³ÃæÖÐ²é¿´µ½²úÆ·¶©µ¥¡£";
+//				this.message = "ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ð²é¿´ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 //			}
 //			else {
 //				throw new Exception("Need Login");
@@ -161,10 +161,10 @@
 //				
 //				List<Product> prolist = Factory.createProductService().getProductsWithId(proName, purNum);
 //				Factory.createProductService().doPurchase(prolist, userId);
-//				this.message = "Ìí¼Óµ½¹ºÎï³µ³É¹¦£¬Äú¿ÉÔÚ¹ºÎï³µÒ³ÃæÖÐ²é¿´µ½¹ºÎï³µÐÅÏ¢";
+//				this.message = "ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï³µï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï³µÒ³ï¿½ï¿½ï¿½Ð²é¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï³µï¿½ï¿½Ï¢";
 //			}
 //			else {
-//				throw new Exception("ÇëÏÈµÇÂ¼");
+//				throw new Exception("ï¿½ï¿½ï¿½Èµï¿½Â¼");
 //			}
 //			
 //		}  catch (Exception e) {

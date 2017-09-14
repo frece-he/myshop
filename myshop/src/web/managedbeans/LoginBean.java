@@ -89,7 +89,7 @@ public class LoginBean {
 			if (exception.getMessage().contains("TECHNICAL_ERROR")) {
 				path = "errorPage.jsp";
 				
-			}else if (exception.getMessage().contains("ÃÜÂë´íÎó")) {
+			}else if (exception.getMessage().contains("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")) {
 				attempts++;
 				if (attempts >= 3) {			
 					try {
@@ -97,10 +97,10 @@ public class LoginBean {
 					} catch (Exception e) {					
 						e.printStackTrace();
 					}
-					this.message = "ÄúµÄÕË»§ÒÑ±»¶³½á£¬Çë³¢ÊÔÍü¼ÇÃÜÂë»òÁªÏµ¹ÜÀíÔ±";
+					this.message = "ï¿½ï¿½ï¿½ï¿½ï¿½Ë»ï¿½ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½á£¬ï¿½ë³¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ô±";
 					
 				}else {
-					this.message = "ÃÜÂë´íÎó";
+					this.message = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 				}
 				
 			}

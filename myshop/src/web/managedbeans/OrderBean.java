@@ -91,15 +91,15 @@ public class OrderBean {
 		try {
 			this.orderList = new ArrayList<Order>();
 			statusItem = new ArrayList<SelectItem>();
-			this.status = "Î´Íê³É";
-			statusItem.add(new SelectItem("Î´Íê³É", "²é¿´Î´Íê³É¶©µ¥"));
-			statusItem.add(new SelectItem("ÒÑÍê³É", "²é¿´ÒÑÍê³É¶©µ¥"));
-			statusItem.add(new SelectItem("ÒÑ¹Ø±Õ", "²é¿´ÒÑ¹Ø±Õ¶©µ¥"));
+			this.status = "Î´ï¿½ï¿½ï¿½";
+			statusItem.add(new SelectItem("Î´ï¿½ï¿½ï¿½", "ï¿½é¿´Î´ï¿½ï¿½É¶ï¿½ï¿½ï¿½"));
+			statusItem.add(new SelectItem("ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½é¿´ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½"));
+			statusItem.add(new SelectItem("ï¿½Ñ¹Ø±ï¿½", "ï¿½é¿´ï¿½Ñ¹Ø±Õ¶ï¿½ï¿½ï¿½"));
 			ExternalContext eContext = FacesContext.getCurrentInstance().getExternalContext();
 			HttpSession session = (HttpSession) eContext.getSession(true);
 			this.userId = (String) session.getAttribute("userId");
 			
-			this.status = "Î´Íê³É";
+			this.status = "Î´ï¿½ï¿½ï¿½";
 			this.refreshOrder();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -116,13 +116,13 @@ public class OrderBean {
 	public void selectStatus(ValueChangeEvent vce){
 		this.status = (String) vce.getNewValue();
 		
-		if (status.equals("Î´Íê³É") ) {
+		if (status.equals("Î´ï¿½ï¿½ï¿½") ) {
 			this.orderList = this.unfinishedOrderList;
 		}
-		else if (status.equals("ÒÑÍê³É")) {
+		else if (status.equals("ï¿½ï¿½ï¿½ï¿½ï¿½")) {
 			this.orderList = this.finishedOrderList;
 		}
-		else if (status.equals("ÒÑ¹Ø±Õ")) {
+		else if (status.equals("ï¿½Ñ¹Ø±ï¿½")) {
 			this.orderList = this.closedOrderList;
 		}
 	}
@@ -136,21 +136,21 @@ public class OrderBean {
 		try {
 			this.allOrderList = Factory.createOrderService().checkOrderById(this.userId);
 			for (Order order : allOrderList) {
-				if(order.getStatus().equals("´ý·¢»õ") || order.getStatus().equals("ÒÑ·¢»õ")){
+				if(order.getStatus().equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½") || order.getStatus().equals("ï¿½Ñ·ï¿½ï¿½ï¿½")){
 					this.unfinishedOrderList.add(order);
-				}else if (order.getStatus().equals("ÒÑÍê³É")) {
+				}else if (order.getStatus().equals("ï¿½ï¿½ï¿½ï¿½ï¿½")) {
 					this.finishedOrderList.add(order);
-				}else if (order.getStatus().equals("ÒÑ¹Ø±Õ")) {
+				}else if (order.getStatus().equals("ï¿½Ñ¹Ø±ï¿½")) {
 					this.closedOrderList.add(order);
 				}				
 			}		
-			if (status == "Î´Íê³É") {
+			if (status == "Î´ï¿½ï¿½ï¿½") {
 				this.orderList = this.unfinishedOrderList;
 			}
-			else if (status == "ÒÑÍê³É") {
+			else if (status == "ï¿½ï¿½ï¿½ï¿½ï¿½") {
 				this.orderList = this.finishedOrderList;
 			}
-			else if (status == "ÒÑ¹Ø±Õ") {
+			else if (status == "ï¿½Ñ¹Ø±ï¿½") {
 				this.orderList = this.closedOrderList;
 			}
 		} catch (Exception e) {
@@ -171,7 +171,7 @@ public class OrderBean {
 			Map<String, Object> map = ae.getComponent().getAttributes();
 			String orderId = (String) map.get("orderId");
 			Factory.createOrderService().finishOrder(orderId);
-			this.status = "Î´Íê³É";
+			this.status = "Î´ï¿½ï¿½ï¿½";
 			this.refreshOrder();
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " finishOrder", e.toString());
@@ -197,7 +197,7 @@ public class OrderBean {
 			if(order != null){
 				Factory.createOrderService().closeOrder(order);
 			}
-			this.status = "Î´Íê³É";
+			this.status = "Î´ï¿½ï¿½ï¿½";
 			this.refreshOrder();
 		} catch (Exception e) {
 			MyShopLogger.logError(this.getClass().getName(), " closeOrder", e.toString());
@@ -223,7 +223,7 @@ public class OrderBean {
 			if(this.userId == null){
 				return "";
 			}else {
-				this.status = "Î´Íê³É";
+				this.status = "Î´ï¿½ï¿½ï¿½";
 				this.refreshOrder();
 			}
 		} catch (Exception e) {
